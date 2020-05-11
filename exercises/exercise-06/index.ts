@@ -92,6 +92,7 @@ function swap<FirstParam, SecondParam>(v1: FirstParam, v2: SecondParam): [Second
     return [v2, v1];
 }
 
+
 function test1() {
     console.log(chalk.yellow('test1:'));
     const [secondUser, firstAdmin] = swap(admins[0], users[1]);
