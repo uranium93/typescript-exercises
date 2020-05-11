@@ -96,14 +96,7 @@ function requestUsers(callback: (response: UsersApiResponse) => void) {
     callback({
         status: 'success',
         data: users
-    }); {
-        "printWidth": 120,
-            "singleQuote": true,
-                "trailingComma": "all",
-                    "arrowParens": "always",
-                        "tabWidth": 2
-    }
-
+    });
 }
 
 function requestCurrentServerTime(callback: (response: unknown) => void) {
