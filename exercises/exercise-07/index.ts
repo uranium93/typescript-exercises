@@ -41,7 +41,7 @@ interface Admin {
     role: string;
 }
 
-type PowerUser = Exclude<User & Admin, 'type'> & { type: 'powerUser' }
+type PowerUser = Omit<Admin & User, 'type'> & { type: 'powerUser' }
 
 type Person = User | Admin | PowerUser;
 
