@@ -9,5 +9,5 @@ declare module 'stats' {
     export const getMaxElement: elementSearch
     export const getMinElement: elementSearch
     export const getMedianElement: elementSearch
-    export const getAverageValue: <T, K extends keyof T>(input: Array<T>, getValue: (a: T) => T[K]) => (number | null)
+    export const getAverageValue: <T>(input: Array<T>, getValue: (a: T) => T[keyof T]) => (number | null)
 }
