@@ -149,7 +149,7 @@ async function testAdminsDatabase() {
 
 Promise.all([
     testUsersDatabase(),
-    //testAdminsDatabase()
+    testAdminsDatabase()
 ]).then(
     () => console.log('All tests have succeeded, congratulations!'),
     (e) => console.error(e.stack)
