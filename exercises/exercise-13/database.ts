@@ -19,7 +19,7 @@ export class Database<T> {
         return parsedLines
     }
 
-    protected evaluate(simpleQuery: any, value: string | number): boolean {
+    protected evaluate(simpleQuery: { [key: string]: any }, value: string | number): boolean {
 
         if (simpleQuery['$eq']) {
             if (value === simpleQuery['$eq']) return true
