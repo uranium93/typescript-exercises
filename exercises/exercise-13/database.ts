@@ -2,11 +2,9 @@
 import fs = require('fs')
 export class Database<T> {
     protected filename: string;
-    protected fullTextSearchFieldNames: unknown[];
     protected noSqlDB: Array<object>;
     constructor(filename: string, fullTextSearchFieldNames: string[]) {
         this.filename = filename;
-        this.fullTextSearchFieldNames = fullTextSearchFieldNames;
         this.noSqlDB = this.migrateDB()
     }
     private migrateDB(): Array<object> {
